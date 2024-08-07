@@ -18,7 +18,7 @@ const Home: React.FC = () => {
 
   return (
     <div className="p-4 bg-custom-blue text-white pb-24">
-         <section className="mb-8">
+      <section className="mb-8">
         <h1 className="text-2xl font-bold mb-5">Featured Movies</h1>
         <div className="relative overflow-hidden">
           <button
@@ -27,7 +27,7 @@ const Home: React.FC = () => {
           >
             {'<'}
           </button>
-          <div ref={destaqueRef} className="flex space-x-4 w-full">
+          <div ref={destaqueRef} className="flex space-x-4 w-full overflow-x-auto scrollbar-hide">
             {filmesDestaque.slice(0, 4).map((filme, index) => (
               <div key={index} className="flex-none w-[300px] h-[600px] bg-gray-800 p-2 rounded-lg shadow-md">
                 <img src={filme.image} alt={filme.title} className="w-full h-[450px] rounded object-cover mb-4" />
