@@ -1,6 +1,6 @@
 const Footer = () => {
     return (
-        <div className="bg-black text-white py-4 px-6 fixed bottom-0 w-full">
+        <div className=" bg-custom-dark  text-white py-4 px-6 fixed bottom-0 w-full">
             <div className="flex justify-around items-center">
                 <div className="flex flex-col items-center">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
