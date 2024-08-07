@@ -1,4 +1,3 @@
-
 import React, { useRef } from 'react';
 import { filmesDestaque, filmesEmBreve, filmesAssistidosRecentemente, filmesSobDemanda } from '../data';
 
@@ -18,7 +17,7 @@ const Home: React.FC = () => {
   };
 
   return (
-    <div className="p-4 bg-black text-white">
+    <div className="p-4 bg-black text-white pb-24"> {/* Added padding-bottom to ensure enough space for the footer */}
       <section className="mb-8">
         <h1 className="text-2xl font-bold mb-4">Featured Movies</h1>
         <div className="relative">
