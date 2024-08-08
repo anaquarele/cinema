@@ -17,32 +17,38 @@ const Home: React.FC = () => {
   };
 
   return (
-    <div className="p-4 bg-custom-blue  text-white pb-24">
+    <div className="p-4 bg-custom-blue text-white pb-24">
       <section className="mb-8">
         <h1 className="text-2xl font-bold mb-5">Featured Movies</h1>
-        <div className="relative overflow-hidden">
+        <div className="relative">
           <button
             className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-800 p-2 z-10"
             onClick={() => scrollLeft(destaqueRef)}
           >
             {'<'}
           </button>
-          <div ref={destaqueRef} className="flex space-x-4 w-full overflow-x-auto scrollbar-hide">
-            {filmesDestaque.slice(0, 4).map((filme, index) => (
-              <div key={index} className="flex-none w-[300px] h-[600px] bg-gray-800 p-2 rounded-lg shadow-md">
-                <img src={filme.image} alt={filme.title} className="w-full h-[450px] rounded object-cover mb-4" />
-                <div className="movie-info">
-                  <h2 className="text-lg font-semibold">{filme.title}</h2>
-                  <p className="text-sm mb-2">{filme.description}</p>
-                  <div className="showtimes flex space-x-2">
-                    {filme.times.map((time, idx) => (
-                      <span key={idx} className="bg-gray-700 py-1 px-2 rounded text-xs">{time}</span>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
+          <div 
+  ref={destaqueRef} 
+  className="flex space-x-4 w-full overflow-hidden"
+>
+  {filmesDestaque.slice(0, 4).map((filme, index) => (
+    <div key={index} className="flex-none w-[250px] h-[420px] bg-gray-800 p-2 rounded-lg shadow-md">
+      <img src={filme.image} alt={filme.title} className="w-full h-[300px] rounded object-cover mb-2" />
+      <div className="movie-info">
+        <h2 className="text-base font-semibold">{filme.title}</h2>
+        <p className="text-xs mb-2 line-clamp-2">{filme.description}</p>
+        <div className="flex flex-wrap gap-1">
+          {filme.times.map((time, idx) => (
+            <span key={idx} className="bg-gray-700 py-2 px-3 rounded text-xs whitespace-nowrap mr-1">
+              {time}
+            </span>
+          ))}
+        </div>
+      </div>
+    </div>
+  ))}
+</div>
+
           <button
             className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-800 p-2 z-10"
             onClick={() => scrollRight(destaqueRef)}
