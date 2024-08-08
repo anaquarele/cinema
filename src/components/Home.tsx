@@ -17,7 +17,7 @@ const Home: React.FC = () => {
   };
 
   return (
-    <div className="p-4 bg-custom-blue text-white pb-24">
+    <div className="p-4 bg-custom-blue  text-white pb-24">
       <section className="mb-8">
         <h1 className="text-2xl font-bold mb-5">Featured Movies</h1>
         <div className="relative overflow-hidden">
