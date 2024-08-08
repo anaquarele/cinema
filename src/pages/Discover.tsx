@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Discover: React.FC = () => {
-  return <div>Discover Page</div>;
+  return <></>;
 };
 
 export default Discover;
