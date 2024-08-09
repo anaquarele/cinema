@@ -16,7 +16,7 @@ const TicketDetails: React.FC = () => {
           className="bg-gray-800 p-2 rounded text-white"
           style={{ zIndex: 50 }}
         >
-          ← Voltar
+          ← Back
         </button>
       </div>
 
